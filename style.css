@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("assets/BG-CD-Login.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  outline: 1px solid #cccccc10;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 95%;
+  margin: 2rem auto 16px auto;
+  padding: 20px 25px;
+  transform: translateY(12px);
+}
+
+h3 {
+  color: #fafafa;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+
+  .robot {
+    width: 55px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.logarNext {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.divDadosPessoais {
+  margin: 24px 0 0 0;
+
+  label {
+    color: #fafafa;
+    font-size: 12px;
+  }
+
+  .divInputs {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cccccc10;
+    border-radius: 8px;
+    padding: 10px;
+    gap: 8px;
+    margin: 8px 0 16px 0;
+    background: #30303030;
+
+    input {
+      border: none;
+      outline: none;
+      background: transparent;
+
+      &::placeholder {
+        color: #cccccc80;
+        font-size: 12px;
+      }
+    }
+
+    .inputSenha::placeholder {
+      letter-spacing: 4px;
+    }
+  }
+}
+
+.forgotPassword {
+  color: #8a51fc;
+  font-size: 12px;
+  text-align: end;
+}
+
+.btnEnviar {
+  background: linear-gradient(0deg, #523096, #a976f8);
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 16px 0 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fafafa;
+  text-decoration: none;
+  text-align: center;
+}
+
+.divOuPai {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.divOu::before {
+  content: "________";
+  color: #cccccc10;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transform: translateX(25px);
+}
+
+.divOu::after {
+  content: "________";
+  color: #cccccc10;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  transform: translateX(-25px);
+}
+
+.divOu {
+  color: #cccccc80;
+  font-size: 12px;
+  font-weight: 100;
+  text-align: center;
+  position: relative;
+}
+
+.account {
+  color: #ccc;
+  font-size: 12px;
+  text-align: center;
+}
+
+.createAccount {
+  color: #8a51fc;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (width >= 581px) {
+  body {
+    background-image: url("/assets/BG-CD-Desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (width <= 580px) {
+  body {
+    background-image: url("/assets/BG-CD-Login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    main {
+      margin: 4rem auto 16px auto;
+    }
+  }
+}

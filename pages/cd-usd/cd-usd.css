@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: #fafafa;
+  font-weight: 200;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("/assets/BG-CD-Login.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.return {
+  display: block;
+  margin: 12px 12px 12px auto;
+  outline: 1px solid #cccccc30;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #30303050;
+  object-fit: cover;
+}
+
+main {
+  outline: 1px solid #cccccc10;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 95%;
+  margin: 2rem auto 16px auto;
+  padding: 20px 25px;
+  transform: translateY(12px);
+}
+
+label {
+  font-size: 16px;
+  color: #fafafa;
+}
+
+.inputSearch {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cccccc10;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+  margin: 8px 0 32px 0;
+  background: #30303030;
+
+  input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fafafa;
+
+    &::placeholder {
+      font-size: 12px;
+      color: #cccccc80;
+    }
+  }
+}
+
+.searchConvert {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    .envelopBr {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      outline: 1px solid #cccccc10;
+      border-radius: 8px;
+      padding: 4px 6px;
+
+      .imgBr {
+        margin-top: 4px;
+      }
+
+      h3 {
+        color: #fafafa;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    .envelopBorder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      position: relative;
+      height: auto;
+      width: 140px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        width: 100%;
+        list-style: none;
+        outline: 1px solid #cccccc10;
+        border-radius: 8px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        backdrop-filter: blur(12px);
+
+        &.aberto {
+          li:not(:first-child) {
+            display: flex;
+          }
+
+          li.esconder-opcao {
+            display: none !important;
+          }
+
+          .arrowDown {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+          }
+        }
+
+        li {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 4px;
+          padding: 4px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #fafafa;
+          padding: 2px;
+          margin: 0;
+          width: 100%;
+          cursor: pointer;
+
+          &:not(:first-child):hover {
+            background-color: #a976f8;
+          }
+
+          &:not(:first-child) {
+            display: none;
+          }
+
+          .arrowDown {
+            margin-left: 8px;
+            transition: transform 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.divConverted {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: .4rem;
+
+  .price, span {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 24px 0;
+    color: #fafafa;
+  }
+
+  .currency-value {
+    color: #a976f8;
+  }
+}
+
+button {
+  background: linear-gradient(0deg, #523096, #a976f8);
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fafafa;
+  cursor: pointer;
+  margin: 16px 0 24px;
+}
+
+.envelopUl {
+  position: relative;
+  width: 130px;
+  height: 60px;
+}
+
+@media (width >= 581px) {
+  body {
+    background-image: url("/assets/BG-CD-Desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (width <= 580px) {
+  body {
+    background-image: url("/assets/BG-CD-Login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    main {
+      margin: 4rem auto 16px auto;
+    }
+  }
+}

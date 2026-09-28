@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -2%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+}
+
+.logoImg {
+    width: 133px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fafafa;
+}
+
+h1 > span {
+    color: #A976F8;  
+}
+
+.paragraphHeader {
+    font-size: 14px;
+    color: #cccccc80;
+    text-align: center;
+    margin-top: 4px;
+}

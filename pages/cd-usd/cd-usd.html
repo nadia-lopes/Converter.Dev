@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cd-usd.css">
+    <script src="cd-usd.js" defer></script>
+    <title>CD - Search</title>
+
+    <!-- Css do Header -->
+    <link rel="stylesheet" href="/components/header/header.css">
+
+    <!-- Css do Footer -->
+    <link rel="stylesheet" href="/components/footer/footer.css">
+
+    <!-- Components JS -->
+    <script src="/js/components.js" defer></script>
+</head>
+
+<body>
+    <a href="/index.html">
+        <img class="return" width="30" height="30" src="https://img.icons8.com/material-outlined/30/ffffff/multiply--v1.png" alt="multiply--v1"/>
+    </a>
+    <div id="header"></div>
+
+    <main>
+        <label for="">Valor</label>
+        <div class="inputSearch">
+            <input class="input-currency" placeholder="R$ 10.000" required>
+        </div>
+
+        <div class="searchConvert">
+            <article>
+                <p>From</p>
+                <div class="envelopBr">
+                    <img class="imgBr" width="40" height="40" src="/assets/brasil 2.svg" alt="BR-LOGO">
+                    <h3>BR</h3>
+                </div>
+            </article>
+
+            <article>
+                <p>To</p>
+                <div class="envelopBorder envelopUl">
+                    <ul>
+                        <li class="topo-select">
+                            <img class="imgMoedaTopo" width="40" height="40" src="" alt="" style="display: none;">
+                            <span class="textoMoedaTopo">Selecione...</span>
+                            <img class="arrowDown" width="20" height="20"
+                                src="https://img.icons8.com/ios-glyphs/20/ffffff/expand-arrow--v1.png"
+                                alt="expand-arrow--v1" />
+                        </li>
+
+                        <li id="dolar">
+                            <img width="40" height="40" src="/assets/estados-unidos 1.svg" alt="USD-LOGO">
+                            USD
+                        </li>
+
+                        <li id="euro">
+                            <img width="40" height="40" src="/assets/euro 1.svg" alt="EURO-LOGO">
+                            EUR
+                        </li>
+
+                        <li id="libra">
+                            <img width="40" height="40" src="/assets/libra 1.svg" alt="LIBRA-LOGO">
+                            LIBRA
+                        </li>
+
+                        <li id="bitcoin">
+                            <img width="40" height="40" src="/assets/bitcoin 1.svg" alt="BITCOIN-LOGO">
+                            BTC
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <div class="divConverted">
+            <p class="price currency-value-to-convert">R$ 10.000</p>
+            <span>=</span>
+            <p class="currency-value">U$ 2.000</p>
+        </div>
+
+        <button class="convert-button">Converter</button>
+    </main>
+    
+    <div id="footer"></div>
+</body>
+
+</html>
